@@ -18,36 +18,36 @@ export const products: Product[] = [
     name: "Lazo",
     price: 89,
     image: ring,
-    tagline: "For the promises you make to yourself.",
+    tagline: "Para las promesas que te haces a ti misma.",
     story:
-      "Lazo was born one quiet morning, when I was thinking about the small vows we keep in silence. The kind nobody hears, but that hold us together. A single warm stone, set close to the skin, like a secret you wear without explaining.",
+      "Lazo nació una mañana tranquila, cuando pensaba en los pequeños votos que guardamos en silencio. Los que nadie escucha, pero que nos sostienen. Una sola piedra cálida, cerca de la piel, como un secreto que llevas sin necesidad de explicar.",
   },
   {
     id: "memoria",
     name: "Memoria",
     price: 145,
     image: necklace,
-    tagline: "Some things are too tender to say out loud.",
+    tagline: "Hay cosas demasiado tiernas para decirse en voz alta.",
     story:
-      "There are memories that don't need to be named. Memoria carries one of those — a deep, quiet purple, resting just above the heart. It is for the people we have loved and the versions of ourselves we are still learning to forgive.",
+      "Hay recuerdos que no necesitan nombre. Memoria carga uno de esos: un púrpura profundo y silencioso, que descansa justo sobre el corazón. Es para las personas que hemos amado y las versiones de nosotros mismos que seguimos aprendiendo a perdonar.",
   },
   {
     id: "rumor",
     name: "Rumor",
     price: 64,
     image: earrings,
-    tagline: "Light enough to forget. Warm enough to remember.",
+    tagline: "Liviana para olvidar. Cálida para recordar.",
     story:
-      "Rumor is what your grandmother used to wear without thinking. Two small hoops, slightly imperfect, that catch the afternoon light. They are the kind of thing you put on once and never take off.",
+      "Rumor es lo que tu abuela usaba sin pensarlo. Dos pequeños aros, ligeramente imperfectos, que atrapan la luz de la tarde. Son el tipo de pieza que te pones una vez y nunca más te quitas.",
   },
   {
     id: "raiz",
     name: "Raíz",
     price: 112,
     image: bracelet,
-    tagline: "For everything you carry from where you come from.",
+    tagline: "Para todo lo que cargas de donde vienes.",
     story:
-      "Raíz means root. It is braided slowly, the way the women in my family used to braid hair before bed. The small green stone is a reminder that some things grow only because someone took the time.",
+      "Raíz significa origen. Se teje despacio, como las mujeres de mi familia trenzaban el cabello antes de dormir. La pequeña piedra verde es un recordatorio de que algunas cosas crecen solo porque alguien se tomó el tiempo.",
   },
 ];
 

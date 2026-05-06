@@ -6,8 +6,8 @@ export const Route = createFileRoute("/cart")({
   component: CartPage,
   head: () => ({
     meta: [
-      { title: "Your cart — Marlú" },
-      { name: "description", content: "The pieces you're holding onto." },
+      { title: "Tu carrito — Marlú" },
+      { name: "description", content: "Las piezas que estás guardando." },
     ],
   }),
 });
@@ -23,16 +23,19 @@ function CartPage() {
 
   return (
     <section className="max-w-3xl mx-auto px-5 sm:px-8 py-16">
-      <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-3">Your cart</p>
-      <h1 className="font-serif text-4xl sm:text-5xl text-primary mb-12">What you're holding onto</h1>
+      <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-3">Tu carrito</p>
+      <h1 className="font-serif text-4xl sm:text-5xl text-primary mb-12">Lo que estás guardando</h1>
 
       {detailed.length === 0 ? (
         <div className="py-16 text-center border-t border-border">
           <p className="font-serif italic text-xl text-muted-foreground mb-6">
-            Nothing here yet. Take your time.
+            Aún nada aquí. Tómate tu tiempo.
           </p>
-          <Link to="/" className="text-sm uppercase tracking-[0.25em] text-primary border-b border-primary/40 pb-1">
-            See the pieces
+          <Link
+            to="/"
+            className="text-sm uppercase tracking-[0.25em] text-primary border-b border-primary/40 pb-1"
+          >
+            Ver las piezas
           </Link>
         </div>
       ) : (
@@ -61,9 +64,9 @@ function CartPage() {
                 <button
                   onClick={() => remove(id)}
                   className="text-xs uppercase tracking-wider text-muted-foreground hover:text-rose transition-colors"
-                  aria-label={`Remove ${product!.name}`}
+                  aria-label={`Quitar ${product!.name}`}
                 >
-                  Remove
+                  Quitar
                 </button>
               </li>
             ))}
@@ -78,10 +81,10 @@ function CartPage() {
             onClick={openCheckout}
             className="mt-10 w-full px-6 py-5 bg-primary text-primary-foreground text-xs uppercase tracking-[0.3em] hover:bg-primary/90 transition-colors"
           >
-            Proceed to checkout
+            Finalizar mi historia
           </button>
           <p className="mt-4 text-xs italic text-center text-muted-foreground">
-            Shipping and small notes come after.
+            El envío y los pequeños detalles vienen después.
           </p>
         </>
       )}
