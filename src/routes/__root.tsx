@@ -79,10 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Slow, handmade jewelry made to carry meaning. Pieces shaped by hand, worn close to memory." },
       { name: "author", content: "Marlú" },
       { property: "og:title", content: "Marlú — Handcrafted jewelry that holds stories" },
-      { property: "og:description", content: "Slow, handmade jewelry made to carry meaning." },
+      { property: "og:description", content: "Slow, handmade jewelry made to carry meaning. Pieces shaped by hand, worn close to memory." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Marlú — Handcrafted jewelry that holds stories" },
+      { name: "twitter:description", content: "Slow, handmade jewelry made to carry meaning. Pieces shaped by hand, worn close to memory." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/43f9f8ff-6ad3-4f8f-885b-4c72de74a2e1/id-preview-e6554ecc--ae108b0e-a0cd-4b9a-9146-0e590b2e985a.lovable.app-1778095180158.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/43f9f8ff-6ad3-4f8f-885b-4c72de74a2e1/id-preview-e6554ecc--ae108b0e-a0cd-4b9a-9146-0e590b2e985a.lovable.app-1778095180158.png" },
     ],
     links: [
       {
