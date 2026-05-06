@@ -9,6 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { CartProvider } from "@/lib/cart";
+import { Header } from "@/components/Header";
+import { CheckoutModal } from "@/components/CheckoutModal";
 
 function NotFoundComponent() {
   return (
@@ -72,11 +75,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Marlú — Handcrafted jewelry that holds stories" },
+      { name: "description", content: "Slow, handmade jewelry made to carry meaning. Pieces shaped by hand, worn close to memory." },
+      { name: "author", content: "Marlú" },
+      { property: "og:title", content: "Marlú — Handcrafted jewelry that holds stories" },
+      { property: "og:description", content: "Slow, handmade jewelry made to carry meaning." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -113,7 +116,19 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <CartProvider>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <footer className="border-t border-border/60 mt-24 py-10 text-center text-xs text-muted-foreground tracking-wide">
+            <p className="font-serif italic text-base text-primary mb-2">Marlú</p>
+            <p>Made slowly, by hand. © {new Date().getFullYear()}</p>
+          </footer>
+          <CheckoutModal />
+        </div>
+      </CartProvider>
     </QueryClientProvider>
   );
 }
