@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
 
 const SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbz2_r8DPxJBrAlzWYwx-qZpg4AQ9GYFDgS_BV0SoMdKtu4KcSHEiBx21_GQZ3pPXPJ5xA/exec";
+  "https://script.google.com/macros/s/AKfycbzp-XHITqWJk1KCwRdcLsk5VKPEPtBwHTzQz_OrgMOay4gYrO1IaAIBTF0hgux52ionFg/exec";
 
 export function CheckoutModal() {
   const { checkoutOpen, closeCheckout } = useCart();

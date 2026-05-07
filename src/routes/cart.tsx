@@ -6,7 +6,7 @@ export const Route = createFileRoute("/cart")({
   component: CartPage,
   head: () => ({
     meta: [
-      { title: "Tu carrito — Marlú" },
+      { title: "Tu carrito" },
       { name: "description", content: "Las piezas que estás guardando." },
     ],
   }),
@@ -15,9 +15,7 @@ export const Route = createFileRoute("/cart")({
 function CartPage() {
   const { items, remove, openCheckout } = useCart();
 
-  const detailed = items
-    .map((i) => ({ ...i, product: getProduct(i.id) }))
-    .filter((i) => i.product);
+  const detailed = items.map((i) => ({ ...i, product: getProduct(i.id) })).filter((i) => i.product);
 
   const total = detailed.reduce((s, i) => s + (i.product?.price ?? 0) * i.quantity, 0);
 
@@ -56,9 +54,12 @@ function CartPage() {
                   <Link to="/piece/$id" params={{ id }}>
                     <h3 className="font-serif text-xl text-primary">{product!.name}</h3>
                   </Link>
-                  <p className="text-xs italic text-muted-foreground mt-1 truncate">{product!.tagline}</p>
+                  <p className="text-xs italic text-muted-foreground mt-1 truncate">
+                    {product!.tagline}
+                  </p>
                   <p className="text-sm text-amber-deep mt-2">
-                    €{product!.price} {quantity > 1 && <span className="text-muted-foreground">× {quantity}</span>}
+                    €{product!.price}{" "}
+                    {quantity > 1 && <span className="text-muted-foreground">× {quantity}</span>}
                   </p>
                 </div>
                 <button
