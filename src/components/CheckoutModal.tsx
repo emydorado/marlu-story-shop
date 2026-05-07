@@ -36,13 +36,16 @@ export function CheckoutModal() {
     setLoading(true);
     setError(false);
     try {
+      console.log("[Marlú] Enviando correo:", email.trim());
       await fetch(SHEETS_URL, {
         method: "POST",
         mode: "no-cors",
         body: new URLSearchParams({ email: email.trim() }),
       });
+      console.log("[Marlú] Fetch completado (respuesta opaca, no-cors)");
       setSubmitted(true);
-    } catch {
+    } catch (err) {
+      console.error("[Marlú] Error en fetch:", err);
       setError(true);
     } finally {
       setLoading(false);
