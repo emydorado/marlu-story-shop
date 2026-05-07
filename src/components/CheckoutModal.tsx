@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
 
+const SHEETS_URL =
+  "https://script.google.com/macros/s/AKfycbz2_r8DPxJBrAlzWYwx-qZpg4AQ9GYFDgS_BV0SoMdKtu4KcSHEiBx21_GQZ3pPXPJ5xA/exec";
+
 export function CheckoutModal() {
   const { checkoutOpen, closeCheckout } = useCart();
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (!checkoutOpen) {
       setEmail("");
+      setLoading(false);
       setSubmitted(false);
+      setError(false);
       return;
     }
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && closeCheckout();
@@ -23,9 +30,23 @@ export function CheckoutModal() {
 
   if (!checkoutOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) setSubmitted(true);
+    if (!email.trim()) return;
+    setLoading(true);
+    setError(false);
+    try {
+      await fetch(SHEETS_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: new URLSearchParams({ email: email.trim() }),
+      });
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,7 +65,8 @@ export function CheckoutModal() {
               Gracias, te avisaremos pronto.
             </h2>
             <p className="text-sm text-muted-foreground italic mb-8 leading-relaxed">
-              Martha Lucía sabrá que tu historia espera. Cuando la próxima colección esté lista, serás de los primeros en saberlo.
+              Martha Lucía sabrá que tu historia espera. Cuando la próxima
+              colección esté lista, serás de los primeros en saberlo.
             </p>
             <button
               onClick={closeCheckout}
@@ -60,9 +82,10 @@ export function CheckoutModal() {
               ¡Gracias por conectar con Marlú!
             </h2>
             <p className="text-sm text-muted-foreground italic mb-8 leading-relaxed">
-              Esta pieza es una edición limitada y actualmente no hay existencias.
-              Estamos tejiendo la próxima colección de historias. Déjanos tu correo
-              para avisarte cuando Martha Lucía termine su próxima creación.
+              Esta pieza es una edición limitada y actualmente no hay
+              existencias. Estamos tejiendo la próxima colección de historias.
+              Déjanos tu correo para avisarte cuando Martha Lucía termine su
+              próxima creación.
             </p>
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               <input
@@ -71,15 +94,22 @@ export function CheckoutModal() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@correo.com"
                 required
-                className="w-full px-4 py-3 border border-border bg-background text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                disabled={loading}
+                className="w-full px-4 py-3 border border-border bg-background text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-primary-foreground text-xs uppercase tracking-[0.3em] hover:bg-primary/90 transition-colors"
+                disabled={loading}
+                className="w-full px-6 py-3 bg-primary text-primary-foreground text-xs uppercase tracking-[0.3em] hover:bg-primary/90 transition-colors disabled:opacity-60"
               >
-                Avisarme
+                {loading ? "Enviando..." : "Avisarme"}
               </button>
             </form>
+            {error && (
+              <p className="mt-3 text-xs text-rose italic">
+                Algo salió mal. Intenta de nuevo.
+              </p>
+            )}
             <button
               onClick={closeCheckout}
               className="mt-4 text-xs text-muted-foreground hover:text-primary transition-colors"
