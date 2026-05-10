@@ -67,7 +67,7 @@ function PiecePage() {
           </h1>
           <p className="font-serif italic text-xl text-rose mb-8 leading-snug">{product.tagline}</p>
           <p className="text-base text-muted-foreground leading-relaxed mb-8">{product.story}</p>
-          <p className="text-lg text-amber-deep tracking-wide mb-10">€{product.price}</p>
+          <p className="text-lg text-amber-deep tracking-wide mb-10">${product.price}</p>
 
           <div className="flex flex-col sm:flex-row gap-3">
             <button

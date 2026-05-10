@@ -58,7 +58,7 @@ function CartPage() {
                     {product!.tagline}
                   </p>
                   <p className="text-sm text-amber-deep mt-2">
-                    €{product!.price}{" "}
+                    ${product!.price}{" "}
                     {quantity > 1 && <span className="text-muted-foreground">× {quantity}</span>}
                   </p>
                 </div>
@@ -75,7 +75,7 @@ function CartPage() {
 
           <div className="flex justify-between items-baseline mt-8 pb-2 border-b border-border">
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Total</span>
-            <span className="font-serif text-2xl text-primary">€{total}</span>
+            <span className="font-serif text-2xl text-primary">${total}</span>
           </div>
 
           <button

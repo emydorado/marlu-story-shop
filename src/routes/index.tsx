@@ -111,7 +111,7 @@ function Home() {
               </div>
               <h3 className="font-serif text-xl text-primary mb-1">{p.name}</h3>
               <p className="text-sm text-muted-foreground italic leading-snug mb-3">{p.tagline}</p>
-              <p className="text-xs tracking-wider text-amber-deep mb-4">€{p.price}</p>
+              <p className="text-xs tracking-wider text-amber-deep mb-4">${p.price}</p>
               <span className="text-xs uppercase tracking-[0.2em] text-primary border-b border-primary/30 group-hover:border-primary pb-0.5 transition-colors">
                 Llevar esta historia →
               </span>
