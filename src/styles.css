@@ -1,66 +1,79 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap");
+
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap');
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
   --color-rose: var(--rose);
   --color-moss: var(--moss);
   --color-amber-deep: var(--amber-deep);
   --color-ochre: var(--ochre);
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Nunito Sans', system-ui, sans-serif;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Nunito Sans", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.25rem;
 
-  /* Brand palette (oklch conversions of provided hex) */
-  --primary: oklch(0.30 0.13 340);          /* #4a0440 deep plum */
+  --primary: oklch(0.3 0.13 340);
   --primary-foreground: oklch(0.97 0.015 70);
-  --rose: oklch(0.47 0.08 15);              /* #8e4b55 dusty rose */
-  --moss: oklch(0.42 0.06 145);             /* #335136 forest moss */
-  --amber-deep: oklch(0.48 0.11 60);        /* #834a00 burnt amber */
-  --ochre: oklch(0.55 0.11 85);             /* #977813 ochre */
 
-  --background: oklch(0.985 0.008 80);      /* warm off-white */
-  --foreground: oklch(0.25 0.08 340);       /* dark plum, never pure black */
+  --rose: oklch(0.47 0.08 15);
+  --moss: oklch(0.42 0.06 145);
+  --amber-deep: oklch(0.48 0.11 60);
+  --ochre: oklch(0.55 0.11 85);
+
+  --background: oklch(0.985 0.008 80);
+  --foreground: oklch(0.25 0.08 340);
 
   --card: oklch(0.985 0.008 80);
   --card-foreground: var(--foreground);
+
   --popover: oklch(0.985 0.008 80);
   --popover-foreground: var(--foreground);
 
   --secondary: oklch(0.94 0.015 70);
   --secondary-foreground: var(--primary);
+
   --muted: oklch(0.94 0.015 70);
   --muted-foreground: oklch(0.45 0.04 30);
+
   --accent: var(--ochre);
   --accent-foreground: oklch(0.99 0 0);
 
@@ -76,9 +89,11 @@
   * {
     border-color: var(--color-border);
   }
+
   html {
     font-family: var(--font-sans);
   }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -87,7 +102,12 @@
     letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4, .font-serif {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif {
     font-family: var(--font-serif);
     font-weight: 400;
     letter-spacing: -0.01em;
