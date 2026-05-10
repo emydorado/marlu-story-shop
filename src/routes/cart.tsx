@@ -47,7 +47,7 @@ function CartPage() {
                     alt={product!.name}
                     width={120}
                     height={120}
-                    className="w-20 h-20 sm:w-24 sm:h-24 object-cover bg-secondary"
+                    className="w-full h-auto object-contain"
                   />
                 </Link>
                 <div className="flex-1 min-w-0">

@@ -23,7 +23,9 @@ export const Route = createFileRoute("/piece/$id")({
   notFoundComponent: () => (
     <div className="max-w-md mx-auto text-center py-32 px-6">
       <h1 className="font-serif text-3xl text-primary mb-4">Esta pieza no pudo encontrarse.</h1>
-      <Link to="/" className="text-sm border-b border-primary/40">Volver al inicio</Link>
+      <Link to="/" className="text-sm border-b border-primary/40">
+        Volver al inicio
+      </Link>
     </div>
   ),
   errorComponent: () => (
@@ -53,12 +55,16 @@ function PiecePage() {
             alt={product.name}
             width={1024}
             height={1024}
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-contain"
           />
         </div>
         <div className="flex flex-col justify-center max-w-md">
-          <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-4">Artesanal · Una de pocas</p>
-          <h1 className="font-serif text-4xl sm:text-5xl text-primary mb-4 leading-tight">{product.name}</h1>
+          <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-4">
+            Artesanal · Una de pocas
+          </p>
+          <h1 className="font-serif text-4xl sm:text-5xl text-primary mb-4 leading-tight">
+            {product.name}
+          </h1>
           <p className="font-serif italic text-xl text-rose mb-8 leading-snug">{product.tagline}</p>
           <p className="text-base text-muted-foreground leading-relaxed mb-8">{product.story}</p>
           <p className="text-lg text-amber-deep tracking-wide mb-10">€{product.price}</p>
