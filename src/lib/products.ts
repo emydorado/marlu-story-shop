@@ -14,40 +14,40 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "lazo",
-    name: "Lazo",
-    price: 89,
+    id: "collar-marlu-rojo",
+    name: "Collar Marlú Rojo",
+    price: 120000,
     image: ring,
-    tagline: "Para las promesas que te haces a ti misma.",
+    tagline: "La belleza de flore-ser humano.",
     story:
-      "Lazo nació una mañana tranquila, cuando pensaba en los pequeños votos que guardamos en silencio. Los que nadie escucha, pero que nos sostienen. Una sola piedra cálida, cerca de la piel, como un secreto que llevas sin necesidad de explicar.",
+      "Algunas flores nacen en entornos nutritivos, lugares seguros, reconfortantes. Otras veces, hasta en las condiciones más adversas, entre el agua y el polvo, logran ser, flore-ser.",
   },
   {
-    id: "memoria",
-    name: "Memoria",
-    price: 145,
+    id: "collar-marlu-azul",
+    name: "Collar Marlú Azul",
+    price: 120000,
     image: necklace,
-    tagline: "Hay cosas demasiado tiernas para decirse en voz alta.",
+    tagline: "Entre el agua y el polvo, flore-ser.",
     story:
-      "Hay recuerdos que no necesitan nombre. Memoria carga uno de esos: un púrpura profundo y silencioso, que descansa justo sobre el corazón. Es para las personas que hemos amado y las versiones de nosotros mismos que seguimos aprendiendo a perdonar.",
+      "Hecho a mano con mostacillas azules celeste, azul rey y tornasol morado. Una pieza inspirada en las flores que logran florecer incluso en medio de las condiciones más difíciles.",
   },
   {
-    id: "rumor",
-    name: "Rumor",
-    price: 64,
+    id: "collar-hebra-cielo",
+    name: "Collar Hebra Cielo",
+    price: 95000,
     image: earrings,
-    tagline: "Liviana para olvidar. Cálida para recordar.",
+    tagline: "Hilo de vida que vuelve al recuerdo.",
     story:
-      "Rumor es lo que tu abuela usaba sin pensarlo. Dos pequeños aros, ligeramente imperfectos, que atrapan la luz de la tarde. Son el tipo de pieza que te pones una vez y nunca más te quitas.",
+      "Hebra es hilo, hilo es la vida. Una pieza pensada para rodear el cuerpo de distintas formas y volver una y otra vez sobre el recuerdo.",
   },
   {
-    id: "raiz",
-    name: "Raíz",
-    price: 112,
+    id: "collar-hebra-tinta",
+    name: "Collar Hebra Tinta",
+    price: 98000,
     image: bracelet,
-    tagline: "Para todo lo que cargas de donde vienes.",
+    tagline: "El tejido somos nosotros.",
     story:
-      "Raíz significa origen. Se teje despacio, como las mujeres de mi familia trenzaban el cabello antes de dormir. La pequeña piedra verde es un recordatorio de que algunas cosas crecen solo porque alguien se tomó el tiempo.",
+      "Una hebra parece mínima, pero basta para unir fragmentos. Hecho artesanalmente con mostacillas y piedras naturales.",
   },
 ];
 

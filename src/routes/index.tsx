@@ -14,13 +14,15 @@ function Home() {
         <div className="grid md:grid-cols-2 gap-0 items-stretch min-h-[80vh]">
           <div className="order-2 md:order-1 flex items-center px-6 sm:px-12 lg:px-20 py-16 md:py-24">
             <div className="max-w-md">
-              <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-6">Marlú · Artesanal Colombiano</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-6">
+                Marlú · Artesanal Colombiano
+              </p>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-primary mb-6">
                 Marlú: Joyas que <em className="text-rose">cuentan historias</em>.
               </h1>
               <p className="text-base text-muted-foreground leading-relaxed mb-10 italic">
-                Cada pieza es un hilo que conecta momentos, personas y legados.
-                Bienvenidos al universo de Martha Lucía.
+                Cada pieza es un hilo que conecta momentos, personas y legados. Bienvenidos al
+                universo de Martha Lucía.
               </p>
               <a
                 href="#piezas"
@@ -48,7 +50,9 @@ function Home() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-4">Nuestro origen</p>
             <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-6 leading-tight">
-              El Legado de<br />Martha Lucía
+              El Legado de
+              <br />
+              Martha Lucía
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed">
               Marlú nace del deseo de materializar los recuerdos. Nuestras piezas son creadas
@@ -88,16 +92,13 @@ function Home() {
       <section id="piezas" className="max-w-6xl mx-auto px-5 sm:px-8 pb-24">
         <div className="mb-12 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-3">La colección</p>
-          <h2 className="font-serif text-3xl sm:text-4xl text-primary">Piezas con significado silencioso</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl text-primary">
+            Piezas con significado silencioso
+          </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14">
           {products.map((p) => (
-            <Link
-              key={p.id}
-              to="/piece/$id"
-              params={{ id: p.id }}
-              className="group block"
-            >
+            <Link key={p.id} to="/piece/$id" params={{ id: p.id }} className="group block">
               <div className="overflow-hidden bg-secondary aspect-square mb-5">
                 <img
                   src={p.image}
