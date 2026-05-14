@@ -16,7 +16,7 @@ export const products: Product[] = [
   {
     id: "collar-marlu-rojo",
     name: "Collar Marlú Rojo",
-    price: 120000,
+    price: 140000,
     image: ring,
     tagline: "La belleza de flore-ser humano.",
     story:
@@ -25,7 +25,7 @@ export const products: Product[] = [
   {
     id: "collar-marlu-azul",
     name: "Collar Marlú Azul",
-    price: 120000,
+    price: 140000,
     image: necklace,
     tagline: "Entre el agua y el polvo, flore-ser.",
     story:
@@ -34,7 +34,7 @@ export const products: Product[] = [
   {
     id: "collar-hebra-cielo",
     name: "Collar Hebra Cielo",
-    price: 95000,
+    price: 45000,
     image: earrings,
     tagline: "Hilo de vida que vuelve al recuerdo.",
     story:
@@ -43,7 +43,7 @@ export const products: Product[] = [
   {
     id: "collar-hebra-tinta",
     name: "Collar Hebra Tinta",
-    price: 98000,
+    price: 45000,
     image: bracelet,
     tagline: "El tejido somos nosotros.",
     story:
