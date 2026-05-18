@@ -49,15 +49,24 @@ function PiecePage() {
         ← Volver
       </Link>
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16 mt-8">
-        <div className="bg-secondary overflow-hidden">
-          <img
-            src={product.image}
-            alt={product.name}
-            width={1024}
-            height={1024}
-            className="w-full h-auto object-contain"
-          />
+        <div className="flex flex-col gap-8">
+          <div className="overflow-hidden">
+            <img
+              src={product.image}
+              alt={product.name}
+              width={1024}
+              height={1024}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="border-l-2 border-primary/20 pl-5">
+            <p className="text-xs uppercase tracking-[0.25em] text-ochre mb-3">Poema</p>
+            <p className="font-serif italic text-base text-primary/80 leading-loose whitespace-pre-line">
+              {product.poem}
+            </p>
+          </div>
         </div>
+
         <div className="flex flex-col justify-center max-w-md">
           <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-4">
             Artesanal · Una de pocas
@@ -67,13 +76,6 @@ function PiecePage() {
           </h1>
           <p className="font-serif italic text-xl text-rose mb-6 leading-snug">{product.tagline}</p>
           <p className="text-sm text-muted-foreground leading-relaxed mb-8">{product.story}</p>
-
-          <div className="border-l-2 border-primary/20 pl-5 mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-ochre mb-3">Poema</p>
-            <p className="font-serif italic text-base text-primary/80 leading-loose whitespace-pre-line">
-              {product.poem}
-            </p>
-          </div>
 
           <p className="text-lg text-amber-deep tracking-wide mb-10">${product.price}</p>
 
