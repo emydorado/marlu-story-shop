@@ -65,8 +65,16 @@ function PiecePage() {
           <h1 className="font-serif text-4xl sm:text-5xl text-primary mb-4 leading-tight">
             {product.name}
           </h1>
-          <p className="font-serif italic text-xl text-rose mb-8 leading-snug">{product.tagline}</p>
-          <p className="text-base text-muted-foreground leading-relaxed mb-8">{product.story}</p>
+          <p className="font-serif italic text-xl text-rose mb-6 leading-snug">{product.tagline}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-8">{product.story}</p>
+
+          <div className="border-l-2 border-primary/20 pl-5 mb-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-ochre mb-3">Poema</p>
+            <p className="font-serif italic text-base text-primary/80 leading-loose whitespace-pre-line">
+              {product.poem}
+            </p>
+          </div>
+
           <p className="text-lg text-amber-deep tracking-wide mb-10">${product.price}</p>
 
           <div className="flex flex-col sm:flex-row gap-3">

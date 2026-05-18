@@ -10,13 +10,33 @@ export type Product = {
   image: string;
   tagline: string;
   story: string;
+  poem: string;
 };
 
-const poemFlores =
-  "Algunas flores nacen en entornos nutritivos, lugares seguros, reconfortantes. Otras veces, hasta en las condiciones más adversas, entre el agua y el polvo, logran ser, flore-ser. Nacer es ser semilla, esperar para germinar. Flor es fragilidad inmensa, es la belleza de (flore)ser humano.";
+const poemFlores = `Algunas flores nacen en entornos nutritivos,
+lugares seguros,
+reconfortantes.
+Otras veces, hasta en las condiciones más adversas,
+entre el agua y el polvo,
+logran ser,
+flore-ser.
+Nacer es ser semilla,
+esperar para germinar.
+Flor es fragilidad inmensa,
+es la belleza de (flore)ser humano.`;
 
-const poemHebra =
-  "Hebra es hilo, hilo es la vida, hilo de vida. Comienza al nacer, al llorar por primera vez. Continúa al aprender que la vida se teje; el tejido somos nosotros. Una hebra parece mínima, pero basta para unir fragmentos, para rodear el cuerpo, para volver una y otra vez sobre el pensamiento, sobre el recuerdo.";
+const poemHebra = `Hebra es hilo,
+hilo es la vida,
+hilo de vida.
+Comienza al nacer,
+al llorar por primera vez.
+Continúa al aprender que la vida se teje;
+el tejido somos nosotros.
+Una hebra parece mínima,
+pero basta para unir fragmentos,
+para rodear el cuerpo,
+para volver una y otra vez sobre el pensamiento,
+sobre el recuerdo.`;
 
 export const products: Product[] = [
   {
@@ -25,7 +45,9 @@ export const products: Product[] = [
     price: 140000,
     image: ring,
     tagline: "La belleza de flore-ser humano.",
-    story: poemFlores,
+    story:
+      "Hecho a mano con mostacillas rojas, café-dorado, amarillas y vino tinto. Hebra de color a elección, incluye perlas, terminado en piedras naturales o mostacillas grandes de preferencia.",
+    poem: poemFlores,
   },
   {
     id: "collar-marlu-azul",
@@ -33,7 +55,9 @@ export const products: Product[] = [
     price: 140000,
     image: necklace,
     tagline: "Entre el agua y el polvo, flore-ser.",
-    story: poemFlores,
+    story:
+      "Hecho a mano con mostacillas azules (celeste, rey) y tornasol morado. Hebra de color a elección, terminado en piedras naturales o mostacillas grandes de preferencia.",
+    poem: poemFlores,
   },
   {
     id: "collar-marlu-rosado",
@@ -41,7 +65,9 @@ export const products: Product[] = [
     price: 140000,
     image: earrings,
     tagline: "Hilo de vida que vuelve al recuerdo.",
-    story: poemHebra,
+    story:
+      "Hecho a mano con mostacillas rosadas, terminado en piedras naturales a elección. Pensado para rodear el cuerpo de distintas formas.",
+    poem: poemFlores,
   },
   {
     id: "collar-hebra-tinta",
@@ -49,7 +75,9 @@ export const products: Product[] = [
     price: 45000,
     image: bracelet,
     tagline: "El tejido somos nosotros.",
-    story: poemHebra,
+    story:
+      "Hecho a mano con mostacillas blancas y negras, terminado en piedras naturales a elección. Pensado para rodear el cuerpo de distintas formas.",
+    poem: poemHebra,
   },
 ];
 
