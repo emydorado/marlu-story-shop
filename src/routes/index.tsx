@@ -15,14 +15,14 @@ function Home() {
           <div className="order-2 md:order-1 flex items-center px-6 sm:px-12 lg:px-20 py-16 md:py-24">
             <div className="max-w-md">
               <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-6">
-                Marlú · Artesanal Colombiano
+                Joyería Artesanal Colombiana
               </p>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-primary mb-6">
-                Marlú: Joyas que <em className="text-rose">cuentan historias</em>.
+                Marlú: Joyas que <em className="text-rose">guardan historias</em>.
               </h1>
               <p className="text-base text-muted-foreground leading-relaxed mb-10 italic">
-                Cada pieza es un hilo que conecta momentos, personas y legados. Bienvenidos al
-                universo de Martha Lucía.
+                Cada pieza es un objeto que materializa eventos de la experiencia humana, emociones
+                y pensamientos.
               </p>
               <a
                 href="#piezas"
@@ -49,11 +49,6 @@ function Home() {
         <div className="max-w-6xl mx-auto px-6 sm:px-12 py-24 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-4">Nuestro origen</p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-6 leading-tight">
-              El Legado de
-              <br />
-              Martha Lucía
-            </h2>
             <p className="text-base text-muted-foreground leading-relaxed">
               Marlú nace del deseo de materializar los recuerdos. Nuestras piezas son creadas
               artesanalmente en Colombia, inspiradas en la capacidad de los objetos para guardar
@@ -74,11 +69,8 @@ function Home() {
       {/* Manifiesto */}
       <section className="max-w-2xl mx-auto px-6 py-24 text-center">
         <p className="font-serif text-2xl sm:text-3xl text-primary leading-relaxed italic">
-          "No vendemos accesorios.
-          <br />
-          Vendemos piezas cargadas de intención,
-          <br />
-          nostalgia y conexión emocional."
+          "Queremos que conectes con las historias detrás de los objetos. No solo vendemos
+          accesorios, vendemos piezas motivadas por sensaciones."
         </p>
         <p className="mt-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           — Marlú · Joyería Artesanal Colombiana
@@ -91,7 +83,7 @@ function Home() {
           Nuestro legado
         </p>
         <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-12 text-center leading-tight">
-          De abuela a nieta
+          De ella aprendí
         </h2>
         <div className="space-y-6 text-base text-muted-foreground leading-relaxed">
           <p>
@@ -113,11 +105,19 @@ function Home() {
 
       {/* Galería de Piezas */}
       <section id="piezas" className="max-w-6xl mx-auto px-5 sm:px-8 pb-24">
-        <div className="mb-12 text-center">
+        <div className="mb-16 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-3">La colección</p>
-          <h2 className="font-serif text-3xl sm:text-4xl text-primary">
-            Piezas con significado silencioso
+          <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-6">
+            Capítulo I — Nacer
           </h2>
+          <p className="max-w-2xl mx-auto text-sm text-muted-foreground leading-relaxed italic">
+            Nacer es la primera experiencia humana material. El cuerpo descubre el mundo, se
+            descubre a sí, se habita en su mayor vulnerabilidad. Se nace llorando como protección;
+            en sentir profundamente se adquiere la fuerza. Se aprende el dolor antes que el
+            lenguaje, el dolor se guarda en el cuerpo. Nacer es jamás recordarlo. Es dejar
+            inconsciente el miedo, lo desconocido, lo primero. Recordar nacer es nacer de nuevo en
+            lo ya vivido. Volver al cuerpo que fuimos, crear el cuerpo que somos.
+          </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14">
           {products.map((p) => (

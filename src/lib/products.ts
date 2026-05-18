@@ -12,6 +12,12 @@ export type Product = {
   story: string;
 };
 
+const poemFlores =
+  "Algunas flores nacen en entornos nutritivos, lugares seguros, reconfortantes. Otras veces, hasta en las condiciones más adversas, entre el agua y el polvo, logran ser, flore-ser. Nacer es ser semilla, esperar para germinar. Flor es fragilidad inmensa, es la belleza de (flore)ser humano.";
+
+const poemHebra =
+  "Hebra es hilo, hilo es la vida, hilo de vida. Comienza al nacer, al llorar por primera vez. Continúa al aprender que la vida se teje; el tejido somos nosotros. Una hebra parece mínima, pero basta para unir fragmentos, para rodear el cuerpo, para volver una y otra vez sobre el pensamiento, sobre el recuerdo.";
+
 export const products: Product[] = [
   {
     id: "collar-marlu-rojo",
@@ -19,8 +25,7 @@ export const products: Product[] = [
     price: 140000,
     image: ring,
     tagline: "La belleza de flore-ser humano.",
-    story:
-      "Algunas flores nacen en entornos nutritivos, lugares seguros, reconfortantes. Otras veces, hasta en las condiciones más adversas, entre el agua y el polvo, logran ser, flore-ser.",
+    story: poemFlores,
   },
   {
     id: "collar-marlu-azul",
@@ -28,8 +33,7 @@ export const products: Product[] = [
     price: 140000,
     image: necklace,
     tagline: "Entre el agua y el polvo, flore-ser.",
-    story:
-      "Hecho a mano con mostacillas azules celeste, azul rey y tornasol morado. Una pieza inspirada en las flores que logran florecer incluso en medio de las condiciones más difíciles.",
+    story: poemFlores,
   },
   {
     id: "collar-marlu-rosado",
@@ -37,8 +41,7 @@ export const products: Product[] = [
     price: 140000,
     image: earrings,
     tagline: "Hilo de vida que vuelve al recuerdo.",
-    story:
-      "Hebra es hilo, hilo es la vida. Una pieza pensada para rodear el cuerpo de distintas formas y volver una y otra vez sobre el recuerdo.",
+    story: poemHebra,
   },
   {
     id: "collar-hebra-tinta",
@@ -46,8 +49,7 @@ export const products: Product[] = [
     price: 45000,
     image: bracelet,
     tagline: "El tejido somos nosotros.",
-    story:
-      "Una hebra parece mínima, pero basta para unir fragmentos. Hecho artesanalmente con mostacillas y piedras naturales.",
+    story: poemHebra,
   },
 ];
 
