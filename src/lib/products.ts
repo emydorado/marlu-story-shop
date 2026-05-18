@@ -32,9 +32,9 @@ export const products: Product[] = [
       "Hecho a mano con mostacillas azules celeste, azul rey y tornasol morado. Una pieza inspirada en las flores que logran florecer incluso en medio de las condiciones más difíciles.",
   },
   {
-    id: "collar-hebra-cielo",
-    name: "Collar Hebra Cielo",
-    price: 45000,
+    id: "collar-marlu-rosado",
+    name: "Collar Marlú Rosado",
+    price: 140000,
     image: earrings,
     tagline: "Hilo de vida que vuelve al recuerdo.",
     story:

@@ -62,13 +62,10 @@ function Home() {
             <div className="mt-8 h-px w-16 bg-primary/20" />
           </div>
           <blockquote className="font-serif text-xl sm:text-2xl text-primary leading-relaxed italic border-l-2 border-primary/20 pl-8">
-            "El collar es solo el vehículo.
-            <br />
-            Lo que realmente importa
-            <br />
-            es la historia detrás."
+            "Los humanos somos historias andantes, y contarlas es una forma de darle sentido a
+            nuestras vidas."
             <footer className="mt-4 text-xs not-italic uppercase tracking-[0.3em] text-muted-foreground">
-              — Martha Lucía
+              — Sara Salmerón, Creadora de Marlú
             </footer>
           </blockquote>
         </div>
@@ -86,6 +83,32 @@ function Home() {
         <p className="mt-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           — Marlú · Joyería Artesanal Colombiana
         </p>
+      </section>
+
+      {/* Nuestro Legado */}
+      <section className="max-w-3xl mx-auto px-6 py-24">
+        <p className="text-xs uppercase tracking-[0.3em] text-ochre mb-4 text-center">
+          Nuestro legado
+        </p>
+        <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-12 text-center leading-tight">
+          De abuela a nieta
+        </h2>
+        <div className="space-y-6 text-base text-muted-foreground leading-relaxed">
+          <p>
+            Cuando era niña, veía a mi abuela Martha Lucía utilizar muchas joyas. Pulseras,
+            collares, aretes, anillos y prendedores. Se me hacía lindo, pero yo era más
+            conservadora con mis accesorios. Cuando ella murió quise quedarme con algunas de sus
+            joyas para darle permanencia física a su recuerdo.
+          </p>
+          <p>
+            Comencé a utilizarlas, a disfrutar cómo se veían, y sobre todo cómo me hacían sentir.
+            Era llevar en mí un gusto que adquirí de ella. Recordarla y guardarla en amuletos.
+          </p>
+        </div>
+        <p className="mt-8 text-xs uppercase tracking-[0.3em] text-muted-foreground text-right">
+          — Sara Salmerón
+        </p>
+        <div className="mt-12 h-px bg-primary/10" />
       </section>
 
       {/* Galería de Piezas */}
